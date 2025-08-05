@@ -1,12 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <title>Wojciech Stochmal</title>
 
-  <body>
-    <p>TEST</p>
-  </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/loader.css" />
+    <link rel="stylesheet" href="style/mouseCursor.css" />
+    <link rel="stylesheet" href="style/sections/sectionHero.css" />
+    <link rel="stylesheet" href="style/sections/sectionAbout.css" />
+    <link rel="stylesheet" href="style/sections/sectionProjects.css" />
+    <link rel="stylesheet" href="style/sections/sectionContact.css" />
+    <link rel="stylesheet" href="style/footer.css" />
+    <script type="module" src="script/main.js" defer></script>
+    <script src="../data.js" defer></script>
+    <script src="script/projects.js" defer></script>
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div class="loader">
+        <div class="name">
+            <span class="name-block">
+          <span class="name-block-first">W</span>
+            <span class="name-block-reveal">ojciech</span>
+            </span>
+            <span class="name-block">
+          <span class="name-block-first">S</span>
+            <span class="name-block-reveal">tochmal</span>
+            </span>
+        </div>
+    </div>
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HEADER -->
+        <header>
+            <div class="logo"><img src="./assets/logo.svg" alt="Logo" /></div>
+            <div id="languageSwitcher">
+                <img alt="Polish" src="./assets/pl.png" id="lang-pl" />
+                <img alt="English" src="./assets/en.png" id="lang-en" />
+            </div>
+        </header>
+        <!-- MOUSE CURSOR -->
+        <div id="mouseCursor"></div>
+
+        <!-- CONTENT -->
+        <div id="main-content" class="main-content">
+            <!-- SECTION - HERO -->
+            <section id="section-hero">
+                <div class="content">
+                    <div class="container">
+                        <h1>
+                            <span data-i18n="hero.title.part_1">Cześć, nazywam się</span
+                ><br /><span data-i18n="hero.title.part_2"
+                  >Wojciech Stochmal</span
+                >
+              </h1>
+              <canvas id="canvas"></canvas>
+            </div>
+          </div>
+        </section>
+        <div id="parallax-layer">
+          <!-- SECTION - ABOUT -->
+          <section id="section-about">
+            <div class="content">
+              <div class="container">
+                <h2>
+                  <span data-i18n="about.title">O mnie</span>
+                            </h2>
+                            <p id="about-description" data-i18n="about.description">
+                                Jestem absolwentem Politechniki Świętokrzyskiej na kierunku Informatyka ze specjalnością systemów informatycznych. Tytuł inżyniera uzyskałem w 2024 roku, a niedawno, w 2025 roku, ukończyłem studia magisterskie, kontynuując naukę w tym samym obszarze.
+                                Stale pogłębiam swoją wiedzę i umiejętności z zakresu technologii. Chętnie uczę się nowych i ciekawych rzeczy.
+                            </p>
+                            <h2>
+                                <div class="star"></div>
+                                <span data-i18n="about.technologies.title">Technologie</span>
+                            </h2>
+                            <div class="tech-gallery">
+                                <div class="tech">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">JavaScript</span>
+                                        <span class="tech-type">Frontend</span>
+                                    </div>
+                                </div>
+                                <div class="tech">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">TypeScript</span>
+                                        <span class="tech-type">Frontend</span>
+                                    </div>
+                                </div>
+                                <div class="tech tall">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">React</span>
+                                        <span class="tech-type">Frontend</span>
+                                    </div>
+                                </div>
+                                <div class="tech">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">PHP</span>
+                                        <span class="tech-type">Backend</span>
+                                    </div>
+                                </div>
+                                <div class="tech">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">Java</span>
+                                        <span class="tech-type">Backend</span>
+                                    </div>
+                                </div>
+                                <div class="tech tall">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">Spring Boot</span>
+                                        <span class="tech-type">Backend</span>
+                                    </div>
+                                </div>
+                                <div class="tech">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">MySQL</span>
+                                        <span class="tech-type">Database</span>
+                                    </div>
+                                </div>
+                                <div class="tech">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">MSSQL</span>
+                                        <span class="tech-type">Database</span>
+                                    </div>
+                                </div>
+                                <div class="tech tall">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">MongoDB</span>
+                                        <span class="tech-type">Database</span>
+                                    </div>
+                                </div>
+                                <div class="tech">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">HTML</span>
+                                        <span class="tech-type">Frontend</span>
+                                    </div>
+                                </div>
+                                <div class="tech">
+                                    <div class="tech-inner">
+                                        <span class="tech-name">CSS</span>
+                                        <span class="tech-type">Frontend</span>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION - PROJECTS -->
+            <section id="section-projects">
+                <div class="content">
+                    <div class="container">
+                        <h2>
+                            <span data-i18n="projects.title">Wybrane projekty</span>
+                            <span><sup>(6)</sup></span>
+                        </h2>
+                        <div class="projects-list">
+                            <div class="project-element" data-id="project1">
+                                <h4><a>01.</a>
+                                    <p data-i18n="projects.project_1.title"> Wewnętrzny System Rurociągów</p>
+                                </h4>
+                            </div>
+                            <div class="project-element" data-id="project2">
+                                <h4><a>02.</a>
+                                    <p data-i18n="projects.project_2.title">System praktyk studenckich</p>
+                                </h4>
+                            </div>
+                            <div class="project-element" data-id="project3">
+                                <h4>
+                                    <a>03.</a>
+                                    <p data-i18n="projects.project_3.title">Witryna internetowa z systemem zamówień recept</p>
+                                </h4>
+                            </div>
+                            <div class="project-element" data-id="project4">
+                                <h4><a>04.</a>
+                                    <p data-i18n="projects.project_4.title">Witryna i sklep internetowy Primlock</p>
+                                </h4>
+                            </div>
+                            <div class="project-element" data-id="project5">
+                                <h4>
+                                    <a>05.</a>
+                                    <p data-i18n="projects.project_5.title">Projekt i implementacja systemu do zarządzania projektami na przykładzie firmy z branży TIK</p>
+                                </h4>
+                            </div>
+                            <div class="project-element" data-id="project6">
+                                <h4>
+                                    <a>06.</a>
+                                    <p data-i18n="projects.project_6.title">Generowanie interfejsu graficznego przy użyciu języka dziedzinowego</p>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- SECTION - FOOTER -->
+        <footer>
+            <div class="content">
+                <div class="container">
+                    <div id="footer-up">
+                        <div class="logo">
+                            <img src="./assets/logo.svg" alt="Logo" />
+                        </div>
+                        <div class="socials">
+                            <a href="https://github.com/WStochmal" target="_blank">
+                                <img src="./assets/github.webp" alt="github" /></a>
+                            <a href="https://www.linkedin.com/in/wojciech-stochmal-279a00218/" target="_blank">
+                                <img src="./assets/linkedin.png" alt="linkedin" /></a>
+                            <a href="https://codepen.io/MerestQ" target="_blank">
+                                <img src="./assets/codepen.png" alt="codepen" /></a>
+                        </div>
+                        <div class="contact">
+                            <button id="contact-button">
+                    <a data-i18n="footer.contact" href="mailto:wojciech.stochmal@example.com">Kontakt</a>
+                  </button>
+                        </div>
+
+                        <p>
+                            <span>Wojciech Stochmal © 2025</span>
+                        </p>
+                    </div>
+                </div>
+        </footer>
+        </div>
+    </main>
+    <!-- SECTION - PROJECT DETAILS -->
+    <div id="project-window">
+        <div id="project-window-background">
+            <div class="logo">
+                <img src="./assets/logo.svg" alt="Logo" />
+            </div>
+            <button id="close">
+          <img src="assets/close.png" alt="Close" />
+        </button>
+        </div>
+        <div id="project-window-content">
+            <div class="project-overlay"></div>
+            <div id="project-header" class="project-header">
+                <div id="project-name"></div>
+                <div id="project-description"></div>
+            </div>
+            <div id="project-body">
+                <div id="project-details" class="project-section">
+                    <h4 class="project-section-header" data-i18n="projects.project_1.details">Szczegóły</h4>
+                    <table class="project-section-content-table">
+                        <thead class="project-section-content-table-header">
+                            <tr>
+                                <th data-i18n="projects.project_1.details.client">Klient</th>
+                                <th data-i18n="projects.project_1.details.location">Lokalizacja</th>
+                                <th data-i18n="projects.project_1.details.type">Typ</th>
+                            </tr>
+                        </thead>
+                        <tbody class="project-section-content-table-body">
+                            <!-- JS filling -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="project-services" class="project-section">
+                    <h4 class="project-section-header" data-i18n="projects.project_1.services">Usługi</h4>
+                    <div class="project-section-content"></div>
+                </div>
+                <div id="project-technologies" class="project-section">
+                    <h4 class="project-section-header" data-i18n="projects.project_1.technologies">Technologie</h4>
+                    <div class="project-section-content"></div>
+                </div>
+                <div id="project-media" class="project-section">
+                    <div class="project-section-content"></div>
+                </div>
+            </div>
+            <div id="project-list-other" class="project-section-footer"></div>
+        </div>
+    </div>
+</body>
+
 </html>

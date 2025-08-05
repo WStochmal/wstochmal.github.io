@@ -1,0 +1,120 @@
+#section-about {
+  width: 100%;
+  background: var(--color-dark);
+}
+
+#section-about .content {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#section-about .content h2 {
+  color: var(--color-light-grey);
+  margin-bottom: 2rem;
+}
+
+#section-about .content h2:last-of-type {
+  padding: 3rem 0;
+  /* font-size: 0.75rem; */
+  color: #d5d5de;
+  margin-bottom: 1rem;
+  font-weight: 200;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#section-about .content #about-description {
+  font-size: 1.5rem;
+  color: var(--color-light-grey);
+  padding-left: 5rem;
+  text-indent: 5rem;
+  text-align: justify;
+}
+
+.tech-gallery {
+  column-count: 3;
+  column-gap: 1.5rem;
+  perspective: 1000px;
+}
+
+.tech {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  min-height: 8rem;
+  break-inside: avoid;
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  color: var(--color-light-grey);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0.55;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.tech.tall {
+  min-height: 12rem;
+}
+
+.tech:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.tech-name {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tech-type {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-light-grey);
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-inner {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+  will-change: transform;
+  position: relative;
+  z-index: 2;
+}
+
+.tech-name,
+.tech-type {
+  display: block;
+  transform: translateZ(50px);
+  transition: transform 0.3s ease;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.star {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #4568dc, #b06ab3);
+  clip-path: polygon(
+    50% 0%,
+    /* top point */ 58% 42%,
+    /* right inner */ 100% 50%,
+    /* right point */ 58% 58%,
+    /* right-bottom inner */ 50% 100%,
+    /* bottom point */ 42% 58%,
+    /* left-bottom inner */ 0% 50%,
+    /* left point */ 42% 42% /* left-top inner */
+  );
+}

@@ -1,0 +1,7 @@
+#section-contact {
+  position: relative;
+  width: 100%;
+  background: var(--color-light);
+  z-index: 2;
+  height: 20svh;
+}
