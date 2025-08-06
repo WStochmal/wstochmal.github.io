@@ -24,7 +24,11 @@
   top: 2.5rem;
 }
 
-#section-hero .container h1 span:last-child {
+#section-hero .container img#hero-image {
+  display: none;
+}
+
+#section-hero .container h1 span#wave-text {
   font-size: 3rem;
   background: -webkit-linear-gradient(45deg, #4568dc, #b06ab3);
   /* Chrome 10-25, Safari 5.1-6 */
@@ -35,6 +39,10 @@
   font-weight: 400;
 }
 
+#section-hero .container h1 span#wave-text span {
+  font-weight: 400;
+}
+
 #hero-canvas {
   position: absolute;
   top: 0;
@@ -42,4 +50,41 @@
   display: block;
   width: 100%;
   height: 100%;
+}
+
+/* NAME ANIMATION WAVE */
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#wave-text span {
+  display: inline-block;
+  animation: wave 1s ease-in-out 1;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  #canvas {
+    display: none;
+  }
+  #section-hero .container img#hero-image {
+    display: block;
+    width: 100%;
+  }
+  #section-hero .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
 }

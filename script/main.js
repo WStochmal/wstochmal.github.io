@@ -8,12 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
   initTranslations();
   //    LOADER
   initLoader();
-  //   MOUSE CURSOR
-  initMouseCursor();
+
   //   SMOOTH SCROLL
   initSmoothScroll();
-  //   HERO CANVAS
-  initHeroCanvas();
+
+  if (!isMobile()) {
+    //   HERO CANVAS
+    initHeroCanvas();
+    //   MOUSE CURSOR
+    initMouseCursor();
+  }
+
+  // TECH CARDS INTERACTION
 
   document.querySelectorAll(".tech").forEach((card) => {
     const inner = card.querySelector(".tech-inner");
@@ -29,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const rotateY = ((x - centerX) / centerX) * 10;
 
       card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-      // tekst przeciwnie i słabiej – efekt głębi
       inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
     });
 
@@ -39,4 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
       inner.style.transform = "rotateX(0deg) rotateY(0deg)";
     });
   });
+});
+
+export function isMobile() {
+  return window.innerWidth <= 768;
+}
+
+window.addEventListener("resize", () => {
+  isMobile();
 });

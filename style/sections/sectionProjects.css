@@ -409,3 +409,21 @@
   padding-right: 1rem;
   color: white;
 }
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  #section-projects .project-element {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+  #project-window-background {
+    display: none;
+  }
+  #project-window-content {
+    flex: 1;
+  }
+  #project-window-content #project-body .project-section h4 {
+    font-size: 2rem;
+  }
+}

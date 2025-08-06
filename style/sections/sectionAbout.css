@@ -1,6 +1,8 @@
 #section-about {
   width: 100%;
   background: var(--color-dark);
+  transform: translateY(30svh);
+  transition: 0.8s;
 }
 
 #section-about .content {
@@ -117,4 +119,34 @@
     /* left-bottom inner */ 0% 50%,
     /* left point */ 42% 42% /* left-top inner */
   );
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  #section-about .content #about-description {
+    font-size: 2rem;
+    padding-left: 0;
+  }
+  .tech-gallery {
+    column-count: 2;
+  }
+  .tech.tall {
+    min-height: 8rem;
+  }
+  .tech {
+    opacity: 0.75;
+    transform-style: flat;
+    perspective: 0px;
+  }
+  .tech-name,
+  .tech-type {
+    transform: translateZ(0);
+  }
+  .tech-name {
+    font-size: 2rem;
+  }
+  .tech-type {
+    font-size: 1.5rem;
+  }
 }
