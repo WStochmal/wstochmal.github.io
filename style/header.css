@@ -38,3 +38,20 @@ header .logo {
 header #logo img {
   width: 100px;
 }
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  header {
+    position: relative;
+    top: 2rem;
+    width: calc(100% - 4rem);
+    left: 0;
+    transform: none;
+  }
+  #languageSwitcher img {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+  }
+}

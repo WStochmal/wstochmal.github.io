@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectsElements = document.querySelectorAll(".project-element");
   const projectWindow = document.getElementById("project-window");
   const projectsList = document.querySelector(".projects-list");
-  const closeButton = document.getElementById("close");
+  const closeButton = document.querySelectorAll(".close");
   const nameEl = document.getElementById("project-name");
   const descEl = document.getElementById("project-description");
   const overlay = document.querySelector(".project-overlay");
@@ -221,11 +221,14 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Handle close button
-  closeButton.addEventListener("click", () => {
-    document.body.style.overflowY = "auto";
-    projectWindow.classList.remove("show");
-    projectsList.classList.remove("hide");
-    resetProjectContent();
+
+  closeButton.forEach((button) => {
+    button.addEventListener("click", () => {
+      document.body.style.overflowY = "auto";
+      projectWindow.classList.remove("show");
+      projectsList.classList.remove("hide");
+      resetProjectContent();
+    });
   });
 
   // Reset project content

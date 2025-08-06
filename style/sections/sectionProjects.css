@@ -286,7 +286,7 @@
 
 /* Close button */
 
-#project-window-background button#close {
+#project-window-background button.close {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -304,7 +304,7 @@
   justify-content: center;
 }
 
-#project-window-background button#close img {
+#project-window-background button.close img {
   width: 20px;
   height: 20px;
 }
@@ -322,6 +322,10 @@
   z-index: 5;
   transform: translateX(0%);
   transition: transform 0.8s;
+}
+
+#project-window.show .project-header button.close {
+  display: none;
 }
 
 /* #project-window.show .project-overlay {
@@ -414,7 +418,7 @@
 
 @media (max-width: 768px) {
   #section-projects .project-element {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 2rem 0;
   }
   #project-window-background {
@@ -424,6 +428,70 @@
     flex: 1;
   }
   #project-window-content #project-body .project-section h4 {
+    font-size: 2rem;
+  }
+  #section-projects .project-element h4 a {
+    padding-right: 1rem;
+  }
+  #section-projects .project-element h4:hover {
+    all: unset;
+  }
+  #project-window-content #project-header #project-name {
+    font-size: 2rem;
+  }
+  #project-window-content #project-header #project-description {
+    font-size: 2.5rem;
+    padding-left: 0;
+  }
+  #project-window-content #project-body .project-section h4 {
+    font-size: 2.5rem;
+  }
+  #project-window.show .project-header button.close {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: var(--color-dark);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #project-window.show .project-header button.close img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+  }
+  #project-window.show .project-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+  #project-window-content #project-header #project-name {
+    flex: calc(1 - 40px);
+  }
+  .other-project-element {
+    font-size: 2.5rem;
+    padding: 2rem 0;
+  }
+  .other-project-element h4 {
+    font-size: 2.5rem;
+  }
+  #project-technologies .project-section-content .technologies-container {
+    flex-direction: row !important;
+  }
+  #project-technologies .project-section-content .technologies-container div {
+    width: calc((50% - 1rem));
+    font-size: 2rem;
+  }
+  .project-section-content-table-header th {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  .project-section-content-table-body td {
     font-size: 2rem;
   }
 }
