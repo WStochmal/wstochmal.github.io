@@ -76,3 +76,21 @@ footer {
   transform: translate3d(0, 0, 0);
   transition: transform 0.1s linear;
 }
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  footer {
+    position: relative;
+    transform: none !important;
+    font-size: 1.5rem;
+  }
+  .socials img {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+  }
+  #footer-up button#contact-button {
+    font-size: 2rem;
+  }
+}

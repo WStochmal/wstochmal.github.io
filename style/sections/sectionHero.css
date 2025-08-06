@@ -102,4 +102,7 @@
   #section-hero .container h1 span#wave-text {
     font-size: 3.5rem;
   }
+  #section-hero .container h1 span#wave-text {
+    display: inline-block;
+  }
 }

@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // TECH CARDS INTERACTION
 
-  if (isMobile()) {
+  if (!isMobile()) {
     document.querySelectorAll(".tech").forEach((card) => {
       const inner = card.querySelector(".tech-inner");
 

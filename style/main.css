@@ -98,4 +98,7 @@ h2 {
   h2 {
     font-size: 3.5rem;
   }
+  #parallax-layer {
+    margin-bottom: 0vh;
+  }
 }

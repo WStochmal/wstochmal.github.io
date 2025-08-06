@@ -27,8 +27,10 @@ export function initSmoothScroll() {
       parallaxLayer.style.transform = `translate3d(0%, -${dy / 1.6}px, 0px)`;
       document.body.style.height = container.clientHeight - dy / 1.6 + "px";
     }
-    if (footer) {
+    if (footer && !isMobile()) {
       footer.style.transform = `translate3d(0, -${dy / 3}px, 0)`;
+    } else if (footer && isMobile()) {
+      footer.style.bottom = `${dy / 1.6}px`;
     }
 
     requestAnimationFrame(renderScroll);
@@ -43,4 +45,8 @@ export function initSmoothScroll() {
   window.addEventListener("wheel", easeScroll);
 
   requestAnimationFrame(renderScroll);
+}
+
+function isMobile() {
+  return window.innerWidth <= 768;
 }

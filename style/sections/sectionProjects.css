@@ -472,13 +472,14 @@
   }
   #project-window-content #project-header #project-name {
     flex: calc(1 - 40px);
+    width: calc(100% - calc(1rem + 40px));
   }
   .other-project-element {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 2rem 0;
   }
   .other-project-element h4 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   #project-technologies .project-section-content .technologies-container {
     flex-direction: row !important;
@@ -493,5 +494,12 @@
   }
   .project-section-content-table-body td {
     font-size: 2rem;
+  }
+  .project-section-header {
+    font-size: 2rem;
+    width: 100%;
+  }
+  #project-list-other {
+    padding: 5rem 2rem;
   }
 }

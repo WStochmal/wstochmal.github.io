@@ -124,6 +124,9 @@
 /* MOBILE */
 
 @media (max-width: 768px) {
+  #section-about {
+    padding: 5rem 0;
+  }
   #section-about .content #about-description {
     font-size: 2.5rem;
     padding-left: 0;
@@ -133,11 +136,13 @@
   }
   .tech.tall {
     min-height: 8rem;
+    height: 8rem;
   }
   .tech {
     opacity: 0.75;
     transform-style: flat;
     perspective: 0px;
+    break-inside: auto;
   }
   .tech-name,
   .tech-type {
@@ -148,5 +153,12 @@
   }
   .tech-type {
     font-size: 1.5rem;
+  }
+  .tech-inner {
+    display: flex;
+    flex-direction: column;
+    transform-style: unset;
+    perspective: unset;
+    transition: none;
   }
 }
