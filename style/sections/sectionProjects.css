@@ -502,4 +502,7 @@
   #project-list-other {
     padding: 5rem 2rem;
   }
+  #section-projects .project-element:hover {
+    all: unset;
+  }
 }
